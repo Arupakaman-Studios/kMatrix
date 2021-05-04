@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/dialogPopupCornerRadius">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryLight"
+        android:minWidth="300dp"
+        >
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="@string/app_name"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            android:textSize="@dimen/textSizeH3"
+            android:textStyle="bold"
+            android:id="@+id/tvDialogTitle"
+            android:background="@color/colorPrimary"
+            />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:id="@+id/cardSelColor"
+            app:layout_constraintTop_toBottomOf="@id/tvDialogTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:cardCornerRadius="10dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <top.defaults.colorpicker.ColorPickerView
+            android:id="@+id/colorPicker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cardSelColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:saveEnabled="false"
+            app:enableBrightness="true"
+            app:enableAlpha="false"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/etColorCode"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/colorPicker"
+            android:layout_marginVertical="10dp"
+            android:textColor="@color/colorAccent"
+            android:inputType="text"
+            android:maxLines="1"
+            android:maxLength="7"
+            android:imeOptions="actionDone"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_height="@dimen/buttonHeightSmall"
+            android:id="@+id/btnLeft"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnRight"
+            app:layout_constraintTop_toBottomOf="@id/etColorCode"
+            tools:text="@string/action_cancel"
+            android:textColor="@color/colorAccent"
+            style="@style/Theme.KMatrix.MaterialButton"
+            android:textSize="@dimen/textSizeH5"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_height="@dimen/buttonHeightSmall"
+            android:id="@+id/btnRight"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnLeft"
+            app:layout_constraintTop_toBottomOf="@id/etColorCode"
+            style="@style/Theme.KMatrix.MaterialButton"
+            tools:text="@string/app_name"
+            app:backgroundTint="?colorPrimaryVariant"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/textSizeH5"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

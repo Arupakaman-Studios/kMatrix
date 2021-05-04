@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name" translatable="false">kMatrix</string>
+
+    <string name="key_ad_mob_app_id">ca-app-pub-7574266774319612~6539356958</string>
+    <string name="key_ad_mob_banner_id">ca-app-pub-7574266774319612/2906485270</string>
+    <string name="key_ad_mob_interstitial_id">ca-app-pub-7574266774319612/1288305369</string>
+
+    <string name="donate_version_pkg_name" translatable="false">com.arupakaman.kmatrix.donate</string>
+    <string name="email_publisher">arupakamanstudios@gmail.com</string>
+    <string name="default_notification_channel_id">kMatrix_Notification_Channel_Id</string>
+
+    <string name="name_major_motoko">草薙素子少佐</string>
+
+    <string name="kmatrix_app_service_desc">Sequences of randomly generated bits streaming down the screen.</string>
+
+    <!-- Titles -->
+    <string name="title_number_of_bits">Number of Bits</string>
+    <string name="title_character_set">Character Set</string>
+    <string name="title_bit_color">Bit Color</string>
+    <string name="title_background_color">Background Color</string>
+    <string name="title_enable_depth">Enable Depth</string>
+    <string name="title_bit_text_size">Bit Text Size</string>
+    <string name="title_bit_change_speed">Bit Change Speed</string>
+    <string name="title_bit_falling_speed">Bit Falling Speed</string>
+    <string name="title_set_wallpaper">Set Wallpaper</string>
+    <string name="title_about_us">About Us</string>
+    <string name="title_reset_to_default">Reset To Default</string>
+    <string name="title_contact_us">Contact Us</string>
+    <string name="title_support_us">Support Us</string>
+    <string name="title_share">Share</string>
+    <string name="title_more_apps">More Apps</string>
+    <string name="title_rate">Rate</string>
+    <string name="title_share_via">Share via :</string>
+    <string name="title_get_donation_version">Get Donation (Ad-Free) Version</string>
+    <string name="title_send_via">Send via :</string>
+
+
+    <!-- Actions -->
+    <string name="action_cancel">Cancel</string>
+    <string name="action_set">Set</string>
+    <string name="action_select">Select</string>
+
+
+    <!-- Messages -->
+    <string name="msg_app_dedicated">This app is dedicated to Major Motoko Kusanagi</string>
+    <string name="msg_values_reset">Values Reset</string>
+    <string name="msg_about_us">kMatrix is developed by <a href="https://www.linkedin.com/in/nareshnathnnk/">Naresh Nath</a> of Arupakaman Studios. Arupakaman Studios is a group of independent developers working on various applications and services. \nYou can send us your feedback and app suggestions via email.</string>
+    <string name="msg_share_kmatrix">Hey, \nCheckout this app that lets you set Matrix Live Wallpaper and Hacker Live Wallpaper with multiple customizations. Get it from : \n</string>
+    <string name="msg_enter_your_message">Enter your message here…</string>
+
+
+    <!-- Descriptions -->
+    <string name="desc_choose_bit_color">Choose the bit color</string>
+    <string name="desc_choose_background_color">Choose the background color</string>
+    <string name="desc_bits_depth">Make some sequences appear to be behind others</string>
+    <string name="desc_about_us">About KMatrix &amp; the developer</string>
+    <string name="desc_reset_default">Reset all values to app\'s default.</string>
+    <string name="desc_get_donation_version">Support the developer. Get kMatrix donation (Ad-Free) version.</string>
+
+
+    <!-- Error Messages -->
+    <string name="err_enter_valid_color_hex">Enter valid color hex!</string>
+    <string name="err_enter_valid_custom_characters">Enter valid custom characters!</string>
+
+
+    <string name="cont_desc_app_logo">kMatrix Logo</string>
+    <string name="hint_enter_custom_text">Enter custom text</string>
+
+
+</resources>

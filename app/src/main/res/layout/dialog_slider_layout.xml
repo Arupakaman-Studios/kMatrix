@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/dialogPopupCornerRadius">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryLight"
+        android:minWidth="300dp"
+        >
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="@string/app_name"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            android:textSize="@dimen/textSizeH3"
+            android:textStyle="bold"
+            android:id="@+id/tvDialogTitle"
+            android:background="@color/colorPrimary"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvDialogTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingHorizontal="10dp"
+            android:layout_marginTop="20dp"
+            tools:text="@string/app_name"
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            android:textSize="@dimen/textSizeH3"
+            android:id="@+id/tvDialogMsg"
+            />
+
+        <com.google.android.material.slider.Slider
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/sliderDialog"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDialogMsg"
+            tools:valueFrom="1"
+            tools:valueTo="50"
+            tools:stepSize="10.0"
+            tools:value="10"
+            android:saveEnabled="false"
+            android:layout_marginHorizontal="20dp"
+            app:trackColor="@color/colorAccent"
+            app:trackColorActive="@color/colorWhite"
+            app:thumbColor="@color/colorAccent"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_height="@dimen/buttonHeightSmall"
+            android:id="@+id/btnLeft"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnRight"
+            app:layout_constraintTop_toBottomOf="@id/sliderDialog"
+            tools:text="@string/action_cancel"
+            android:textColor="@color/colorAccent"
+            style="@style/Theme.KMatrix.MaterialButton"
+            android:textSize="@dimen/textSizeH5"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_height="@dimen/buttonHeightSmall"
+            android:id="@+id/btnRight"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnLeft"
+            app:layout_constraintTop_toBottomOf="@id/sliderDialog"
+            style="@style/Theme.KMatrix.MaterialButton"
+            tools:text="@string/app_name"
+            app:backgroundTint="?colorPrimaryVariant"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/textSizeH5"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/dialogPopupCornerRadius">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryLight"
+        android:minWidth="300dp"
+        >
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/title_character_set"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            android:textSize="@dimen/textSizeH3"
+            android:textStyle="bold"
+            android:id="@+id/tvDialogTitle"
+            android:background="@color/colorPrimary"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/iplCharSet"
+            style="@style/Theme.KMatrix.TextInputLayout.ExposedDropdownMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvDialogTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:endIconTint="@color/colorAccent"
+            android:layout_marginTop="20dp"
+            android:paddingHorizontal="10dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/textSizeH5"
+                android:id="@+id/acTvCharSet"
+                android:inputType="none" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/iplCustomStr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iplCharSet"
+            android:layout_marginHorizontal="20dp"
+            android:hint="@string/hint_enter_custom_text"
+            style="@style/Theme.KMatrix.TextInputLayout"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/textSizeH5"
+                android:maxLength="15"
+                android:inputType="text"
+                android:id="@+id/etCustomStr"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_height="@dimen/buttonHeightSmall"
+            android:id="@+id/btnLeft"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnRight"
+            app:layout_constraintTop_toBottomOf="@id/iplCustomStr"
+            android:text="@string/action_cancel"
+            android:textColor="@color/colorAccent"
+            style="@style/Theme.KMatrix.MaterialButton"
+            android:textSize="@dimen/textSizeH5"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_height="@dimen/buttonHeightSmall"
+            android:id="@+id/btnRight"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnLeft"
+            app:layout_constraintTop_toBottomOf="@id/iplCustomStr"
+            style="@style/Theme.KMatrix.MaterialButton"
+            android:text="@string/action_set"
+            app:backgroundTint="?colorPrimaryVariant"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/textSizeH5"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

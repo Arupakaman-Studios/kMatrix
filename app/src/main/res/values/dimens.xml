@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="paddingVerticalItems">15dp</dimen>
+    <dimen name="textSizeH2">18sp</dimen>
+    <dimen name="textSizeH3">16sp</dimen>
+    <dimen name="textSizeH4">14sp</dimen>
+    <dimen name="textSizeH5">12sp</dimen>
+    <dimen name="paddingHorizontalItems">10dp</dimen>
+    <dimen name="dialogPopupCornerRadius">15dp</dimen>
+    <dimen name="buttonHeightSmall">50dp</dimen>
+</resources>
