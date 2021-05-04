@@ -40,6 +40,8 @@ kMatrix is available on the Google Play Store.
 
 We hope this app serves you well.
 
+kMatrix is a fork of [Hacker Live Wallpaper](https://github.com/gsingh93/hacker-live-wallpaper).
+
 kMatrix is developed by Arupakaman Studios.
 Arupakaman Studios is a group of independent developers working on various applications and services.
 
