@@ -5,6 +5,8 @@ import android.graphics.BlurMaskFilter;
 import android.graphics.BlurMaskFilter.Blur;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.util.Log;
+
 import java.util.Random;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -187,7 +189,11 @@ public class BitSequenceMain {
      *            the application context
      */
     public static void configure(Context context) {
-        Style.initParameters(context);
+        try {
+            Style.initParameters(context);
+        }catch (Exception e){
+            Log.e("BitSequencesMain", "configure", e);
+        }
     }
 
     /**
@@ -263,11 +269,20 @@ public class BitSequenceMain {
      * @param delay
      *            the delay in milliseconds
      */
+
+    private int retryCount = 0;
     private void scheduleThread(int delay) {
-        if (future != null)
-            future.cancel(true);
-        future = scheduler.scheduleAtFixedRate(changeBitRunnable, delay,
-                Style.changeBitSpeed, TimeUnit.MILLISECONDS);
+        try{
+            if (future != null)
+                future.cancel(true);
+            future = scheduler.scheduleAtFixedRate(changeBitRunnable, delay, Style.changeBitSpeed, TimeUnit.MILLISECONDS);
+            retryCount = 0;
+        }catch (Exception e){
+            if (retryCount < 3)
+                scheduleThread();
+            retryCount++;
+            Log.e("BitSequencesMain", "scheduleThread", e);
+        }
     }
 
     /** Shifts the bits back by one and adds a new bit to the end */

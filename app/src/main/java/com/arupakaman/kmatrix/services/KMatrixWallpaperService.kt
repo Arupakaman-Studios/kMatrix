@@ -96,18 +96,22 @@ class KMatrixWallpaperService : WallpaperService() {
 
         // TODO: Not all of the sequences need to be cleared
         private fun resetSequences() {
-            val mPrefs = KMatrixSharedPrefs.getInstance(applicationContext)
-            val color = Color.parseColor(mPrefs.colorBackground)
-            r = color shr 16 and 0xFF
-            g = color shr 8 and 0xFF
-            b = color shr 0 and 0xFF
-            stop()
-            sequences.clear()
-            val numSequences = (1.5 * width / BitSequenceMain.getWidth()).toInt()
-            for (i in 0 until numSequences) {
-                sequences.add(BitSequenceMain(((i * BitSequenceMain.getWidth() / 1.5)).toInt()))
+            try{
+                val mPrefs = KMatrixSharedPrefs.getInstance(applicationContext)
+                val color = Color.parseColor(mPrefs.colorBackground)
+                r = color shr 16 and 0xFF
+                g = color shr 8 and 0xFF
+                b = color shr 0 and 0xFF
+                stop()
+                sequences.clear()
+                val numSequences = (1.5 * width / BitSequenceMain.getWidth()).toInt()
+                for (i in 0 until numSequences) {
+                    sequences.add(BitSequenceMain(((i * BitSequenceMain.getWidth() / 1.5)).toInt()))
+                }
+                start()
+            }catch (e: Exception){
+                Log.e("KMatrixWallpaperSrc", "scheduleThread", e)
             }
-            start()
         }
 
         private fun pause() {

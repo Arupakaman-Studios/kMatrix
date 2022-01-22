@@ -6,9 +6,9 @@ plugins {
 }
 
 ext {
-    versionCodeGPlayAds = 1
-    versionCodeGPlayPro = 1
-    versionCodeFdroid = 1
+    versionCodeGPlayAds = 2
+    versionCodeGPlayPro = 2
+    versionCodeFdroid = 2
 }
 
 android {
@@ -33,15 +33,15 @@ android {
 
     }
 
-    compileSdkVersion 30
-    buildToolsVersion "30.0.2"
+    compileSdkVersion 31
+    buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.arupakaman.kmatrix"
-        minSdkVersion 17
-        targetSdkVersion 30
-        versionCode versionCodeGPlayPro
-        versionName "1.0.0"
+        minSdkVersion 19
+        targetSdkVersion 31
+        versionCode versionCodeGPlayAds
+        versionName "1.0.1"
 
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled true
@@ -135,11 +135,11 @@ android {
 
 dependencies {
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.4.31"
-    implementation 'androidx.core:core-ktx:1.3.2'
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.3.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10"
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
     implementation "androidx.multidex:multidex:2.0.1"
 
     implementation 'com.github.duanhong169:colorpicker:1.1.6'
@@ -147,14 +147,14 @@ dependencies {
     /**
      *   With Google Play Dependencies
      */
-    adsGPlayImplementation platform('com.google.firebase:firebase-bom:26.5.0')
+    adsGPlayImplementation platform('com.google.firebase:firebase-bom:29.0.3')
     adsGPlayImplementation 'com.google.firebase:firebase-crashlytics-ktx'
-    adsGPlayImplementation "com.google.firebase:firebase-ads"
-    adsGPlayImplementation 'com.google.android.play:core:1.10.0'
     adsGPlayImplementation "com.google.firebase:firebase-messaging"
+    adsGPlayImplementation 'com.google.firebase:firebase-ads:20.5.0'
+    adsGPlayImplementation 'com.google.android.play:core:1.10.3'
 
-    proGPlayImplementation platform('com.google.firebase:firebase-bom:26.5.0')
-    proGPlayImplementation 'com.google.android.play:core:1.10.0'
+    proGPlayImplementation platform('com.google.firebase:firebase-bom:29.0.3')
+    proGPlayImplementation 'com.google.android.play:core:1.10.3'
     proGPlayImplementation 'com.google.firebase:firebase-crashlytics-ktx'
     proGPlayImplementation "com.google.firebase:firebase-messaging"
 
